@@ -1,0 +1,54 @@
+class Animal {
+    var legs: Int
+
+    init(legs: Int) {
+        self.legs = legs
+    }
+}
+
+class Dog: Animal {
+    func speak() {
+        print("Woof Woof")
+    }
+}
+
+class Corgi: Dog {
+    override func speak() {
+        print("Woof Woof, I'm a Corgi!")
+    }
+}
+
+class Poodle: Dog {
+    override func speak() {
+        print("Woof Woof, I'm a Poodle!")
+    }
+}
+
+class Cat: Animal {
+    var isTame: Bool
+
+    init(legs: Int, isTame: Bool) {
+        self.isTame = isTame
+        super.init(legs: legs)
+    }
+    
+    func speak() {
+        print("Meow")
+    }
+}
+
+class Persian: Cat {
+    override func speak() {
+        print("Meow, I'm a Persian!")
+    }
+}
+
+class Lion: Cat {
+    override func speak() {
+        print("Roar, I'm a Lion!")
+    }
+}
+
+let mylion = Lion(legs: 4, isTame: false)
+
+mylion.speak()
